@@ -1,0 +1,13 @@
+/* CheckList Url Trong Laravel */
+	// 1. Tao url co ban 
+        //$url = url('login');
+
+        //2. Tao url thong qua router
+        // $url = route('post.show');  
+
+        // 3. Tao url thong qua action
+        // $url = action([PostController::class, 'show']);
+
+        // 4. Lay cureent url: duong dan truy cap hien tai
+        $url = url()->current();
+        echo $url;

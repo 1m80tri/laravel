@@ -1,0 +1,4 @@
+/* Các lệnh setting middle ware */
+
+1. Khởi tạo một middle ware
+ - php artisan make:middleware CheckAge

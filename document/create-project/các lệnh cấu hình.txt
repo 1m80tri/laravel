@@ -1,0 +1,49 @@
+Một số lệnh hay dùng trong laravel
+
+1. Lệnh tạo mới một thư viện laravel
+composer create-project --prefer-dist laravel/laravel laravel-unitop
+
+2. Lệnh khởi chạy dụ án laravel
+php artisan serve
+
+3. Lệnh tạo Contronller
+php artisan make:controller PostController
+
+4. Lệnh kiểm tra các action
+php artisan route:list
+
+5. Tạo một controller được khai báo sẵn Action kiểu resource
+php artisan make:controller AdminPostController --resource
+
+6.Cách tạo mới một migration, tạo mới một CSDL
+ + Lệnh tạo mới một migration: php artisan make:migration create_post_table
+ + Thêm vào mysql: php artisan migrate
+
+7.Cách khôi phục lênh migration ở
+ + Khôi phục lệnh tạo ở bản trước đó một bước: php artisan migrate:rollback
+ + Khôi phục lại cơ sỡ dữ liệu ở một bước cụ thể: php artisan migrate:rollback --step=5
+
+8. Chạy lại toàn bộ migrate
+php artisan migrate:refresh
+
+9. Reset toàn bộ thao tác trên Migrate
+php artisan migrate:reset
+
+10. Thêm một cột dữ liệu vào bảng đã có
+php artisan make:migration add_name_to_products_table --table=product
+
+11. Các thuộc tính cho các kiểu dữ liệu khi add database
+Trường cho phép null : nullable();
+Trường không chp phép dữ liệu lặp lại: unique();
+Trường lấy dữ liệu cột mình muốn lấy: -> select('colum','colum');
+Trường truy vấn lấy 1 bản ghi: -> first();
+Trường đếm tổng số lượng bản ghi: -> count();
+Trường nhóm theo key: ->groupBy();
+Trường lấy dữ liệu theo Id: find(2);
+
+12. Truy vấn sắp xếp theo giá tăng dần hoặc giảm dần: orderBy('colum_name') -> tăng dần ; orderBy('colum_name', 'desc')
+
+13. Cách tạo mới một model và model and migration	
+  C1: php artisan make:model Post
+  C2: php artisan make:model Post -m
+ 

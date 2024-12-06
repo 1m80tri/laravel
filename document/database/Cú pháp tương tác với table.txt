@@ -1,0 +1,4 @@
+/*Những cú pháp tương tác với table trong Laravel*/
+
+1.Thêm mới cột vào một bảng đã tồn tại
+  - php artisan make:migration add_gender_to_users_table --table=users

@@ -1,0 +1,5 @@
+/* Các bước cấu hình để send mail */ 
+1.Setting
+  - php artisan make:mail Custome
+2. Tạo func 
+  - return("mails.customer")

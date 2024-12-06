@@ -1,0 +1,12 @@
+/* Check List phân trang trong Laravel  */
+1. Phân trang trong laravel có hai cách
+ + Query Builder
+   $posts =  DB::table('posts')->paginate(4);
+ + ORM
+    $posts = Posts::paginate(4);
+2. Sét điều kiện trong laravel
+   $posts = Posts::where('id','>', 30)->orderby('id','desc')->paginate(4);
+3. Phân trang có tham số: appends
+       {{ $posts->appends(['soft' => 'votes'])->links() }}
+4.  Tùy chỉnh đường dẫn phân trang 
+        $posts->withPath('demo/url');

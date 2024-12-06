@@ -1,0 +1,10 @@
+/*Query builder*/
+
+1. Lấy danh sách bản ghi
+  - $posts = DB::table('post) -> get();
+
+2. Join lấy dữ liệu nhiều bảng
+  - $posts = DB::table('posts')
+	->join('users', 'users.id', '=', 'posts.user_id')
+	->select('users.name', 'post.title')
+	->get();

@@ -1,0 +1,8 @@
+/* Các lệnh khởi tạo manager */
+1. Cài đặc thư viện Auth
+ - composer require laravel/ui
+ - php artisan ui vue --auth  
+ - Nếu không hoạt động setting
+   + npm install
+   + npm run build
+   + npm run dev

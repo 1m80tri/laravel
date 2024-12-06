@@ -1,0 +1,16 @@
+/* Checklist cần lưu ý những lệnh khi khai báo CSDL MySQL bằng migration */
+
+1. Cách khai báo tạo khóa ngoại
+ Cú pháp:
+	Schema::table('post', function(Blueprint $table){
+		$table -> unsignedBigInteger('user_id');
+	$table -> foreign('user_id')-> references('id')->on('users');
+
+	});
+2. Thêm ràng buộc khóa ngoại nhưng vẫn cho xóa dữ liệu những dòng liên quan
+ Cú pháp:
+	Schema::table('post', function(Blueprint $table){
+		$table -> unsignedBigInteger('user_id');
+	$table -> foreign('user_id')-> references('id')->on('users') -> onDelete(cascade);
+
+	});

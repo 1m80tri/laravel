@@ -1,0 +1,19 @@
+/* ELOQENT ORM */
+
+1. Lấy dữ liệu bản ghi
+  - Eloquent ORM: $posts = App\Post::all();
+
+2. Tạo model
+  - php artisan make:model Order -m
+
+3. Thiết lập chế độ thùng rác
+ - $table -> softDeletes();
+
+4. Xuất dữ liệu xóa tạm thời
+  - Xuất tất cả data
+  	+ Post::withTrashed()
+
+  - Lấy dữ liệu đã xóa
+  	+ Post::onlyTrashed()
+5. Khôi phục lại dữ liệu đã xóa 
+  - Post::onlyTrashed()->restore()

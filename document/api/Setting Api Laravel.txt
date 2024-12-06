@@ -1,0 +1,3 @@
+/*Cài đặt Laravel CORS Package*/
+
+1. Lệnh setting

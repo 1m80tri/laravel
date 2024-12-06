@@ -1,0 +1,2 @@
+1. Tạo dữ liệu ban đầu
+- php artisan db:seed

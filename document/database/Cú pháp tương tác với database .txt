@@ -1,0 +1,16 @@
+/*Một số lệnh tương tác với database trong laravel*/
+
+1. Khôi phục lệnh tạo bảng ở bước trước
+  - php artisan migrate::rollback
+
+2. Khôi phục lại cơ sở dữ liệu ở một bước cụ thể
+  - php artisan migrate:rollback --step=5
+
+3. Chạy lại toàn bộ migrate
+  - php artisan migrate::referesh (về cùng một cấp)
+
+4. Reset toàn bộ thao tác trên trên migrate
+
+5.Để thực hiện thay đổi cột (ví dụ như thêm nullable() hoặc thay đổi kiểu dữ liệu của cột) trong Laravel, bạn cần cài đặt gói Doctrine DBAL
+
+ - composer require doctrine/dbal

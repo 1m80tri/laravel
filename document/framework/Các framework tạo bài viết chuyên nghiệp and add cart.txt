@@ -1,0 +1,6 @@
+/* Các framework hỗ trợ trong laravel */
+1. Trình soạn thỏa bài viết chuyên nghiệp 
+ - https://github.com/UniSharp/laravel-filemanager
+
+2. Hỗ trợ cart trong Laravel
+ - https://github.com/hardevine/LaravelShoppingcart

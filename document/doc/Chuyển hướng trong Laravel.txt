@@ -1,0 +1,17 @@
+/*CheckList chuyển hướng trong laravel*/
+1. Chuyển hướng nội bộ thông qua các url
+        // return redirect('post/show');
+2. Chuyển hướng thông qua router
+ + web.php
+	Route::get("post/show", [PostController::class, 'show'])->	name('post.show');
+ + controller : return view
+        return redirect()->route('post.show');
+3. Chuyển hướng kèm theo flashing session
+ + controller: return view 
+        return redirect('post/show')->with('status','Thêm bài viết thành 	công');
+ 
+
+4. Chuyển hướng đến một website bên ngoài hệ thống
+
+
+								

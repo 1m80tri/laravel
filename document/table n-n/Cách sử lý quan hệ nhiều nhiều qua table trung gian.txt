@@ -1,0 +1,7 @@
+/* Cách xử lý quan hệ nhiều nhiều */
+
+- table role
+- table permission
+=> role_permission
+
+Việc lưu vào bảng trung gian role_permission được Laravel tự động xử lý thông qua phương thức attach và định nghĩa mối quan hệ trong model.
